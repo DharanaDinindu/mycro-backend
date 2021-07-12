@@ -18,6 +18,23 @@ app.get('/', (req, res) => {
   })
 })
 
+app.get('/', (req, res) => {
+  res.send({
+	menuItems: [
+		{
+			itemId: "dashboard",
+			itemName: "Dashboard",
+			icon: "https://github.com/DharanaDinindu/mycro-frontend/blob/main/MycroClient/assets/icons/speedometer2.svg"
+		},
+			{
+			itemId: "orders",
+			itemName: "All Orders",
+			icon: "https://github.com/DharanaDinindu/mycro-frontend/blob/main/MycroClient/assets/icons/bag-check.svg"
+		}
+	]
+  })
+})
+
 app.listen(port, () => {
   console.log(`Mycro backend API listening at http://localhost:${port}`)
 })
